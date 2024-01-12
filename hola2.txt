@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<style>
+table{
+width: 30%;
+border: 2px solid;
+margin-left: auto;
+margin-right: auto;
+}
+td,tr{
+	border:1px solid;
+	text-align: center;	
+	width: 50%;
+}
+th{
+	border:1px solid;
+	border-color: black;
+	text-align: center;	
+	width: 50%;
+}
+</style>
+
+<?php
+$dias = array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
+
+$diaHoy = $dias[date('w')];
+//echo "El dia de hoy es: ".$diaHoy;
+//php.net date
+switch ($diaHoy) {
+	case 'Lunes':
+		echo 
+'<table id="Lunes">
+	<tr>
+		<th colspan="2" style="background-color: #6C99E7;">Lunes</th>
+	</tr>
+	<tr>
+		<th style="background-color: #D6D6D6;">Horario</th>
+		<th style="background-color: #D6D6D6;">Clase</th>
+	</tr>
+	<tr>
+		<td>7 - 8</td>
+		<td>Inglés III</td>
+	</tr>
+	<tr>
+		<td>8 - 9</td>
+		<td rowspan="2">Aplicaciones Web</td>
+	</tr>
+	<tr>
+		<td>9 - 10</td>
+	</tr>
+	<tr>
+		<td>10 - 11</td>
+		<td rowspan="2">Integradora I</td>
+	</tr>
+	<tr>
+		<td>11 - 12</td>
+	</tr>
+	<tr>
+		<td>12 - 1</td>
+		<td>Base de datos para aplicaciones</td>
+	</tr>
+</table>';
+		break;
+
+	case 'Martes':
+		echo 
+'<table id="Martes">
+	<tr>
+		<th colspan="2" style="background-color: #886CE7;">Martes</th>
+	</tr>
+	<tr>
+		<th style="background-color: #D6D6D6;">Horario</th>
+		<th style="background-color: #D6D6D6;">Clase</th>
+	</tr>
+	<tr>
+		<td>7 - 8</td>
+		<td rowspan="2">Probabilidad y Estadística</td>
+	</tr>
+	<tr>
+		<td>8 - 9</td>
+	</tr>
+	<tr>
+		<td>9 - 10</td>
+		<td rowspan="2">Aplicaciones Web</td>
+	</tr>
+	<tr>
+		<td>10 - 11</td>
+	</tr>
+	<tr>
+		<td>11 - 12</td>
+		<td>Base de datos para aplicaciones</td>
+	</tr>
+	<tr>
+		<td>12 - 1</td>
+		<td>Cálculo Diferencial</td>
+	</tr>
+</table>';
+		break;
+
+	case 'Miércoles':
+		echo 
+'<table id="Miércoles">
+	<tr>
+		<th colspan="2" style="background-color: #E76CDA;">Miércoles</th>
+	</tr>
+	<tr>
+		<th style="background-color: #D6D6D6;">Horario</th>
+		<th style="background-color: #D6D6D6;">Clase</th>
+	</tr>
+	<tr>
+		<td>7 - 8</td>
+		<td rowspan="2">Formación Sociocultural III</td>
+	</tr>
+	<tr>
+		<td>8 - 9</td>
+	</tr>
+	<tr>
+		<td>9 - 10</td>
+		<td rowspan="2">Inglés III</td>
+	</tr>
+	<tr>
+		<td>10 - 11</td>
+	</tr>
+	<tr>
+		<td>11 - 12</td>
+		<td rowspan="2">Sistemas Operativos</td>
+	</tr>
+	<tr>
+		<td>12 - 1</td>
+	</tr>
+	<tr>
+		<td>1 - 2</td>
+		<td rowspan="2">Base de datos para aplicaciones</td>
+	</tr>
+	<tr>
+		<td>2 - 3</td>
+	</tr>
+</table>';
+		break;
+
+	case 'Jueves':
+		echo
+'<table id="Jueves">
+	<tr>
+		<th colspan="2" style="background-color: #E76C99;">Jueves</th>
+	</tr>
+	<tr>
+		<th style="background-color: #D6D6D6;">Horario</th>
+		<th style="background-color: #D6D6D6;">Clase</th>
+	</tr>
+	<tr>
+		<td>7 - 8</td>
+		<td rowspan="2">Probabilidad y Estadística</td>
+	</tr>
+	<tr>
+		<td>8 - 9</td>
+	</tr>
+	<tr>
+		<td>9 - 10</td>
+		<td>Tutoría</td>
+	</tr>
+	<tr>
+		<td>10 - 11</td>
+		<td>Sistemas Operativos</td>
+	</tr>
+	<tr>
+		<td>11 - 12</td>
+		<td>Base de datos para aplicaciones</td>
+	</tr>
+	<tr>
+		<td>12 - 1</td>
+		<td>Inglés III</td>
+	</tr>
+	<tr>
+		<td>1 - 2</td>
+		<td rowspan="2">Cálculo Diferencial</td>
+	</tr>
+	<tr>
+		<td>2 - 3</td>
+	</tr>
+</table>';
+		break;
+
+	case 'Viernes':
+		echo 
+'<table id="Viernes">
+	<tr>
+		<th colspan="2" style="background-color: #E76C7B;">Viernes</th>
+	</tr>
+	<tr>
+		<th style="background-color: #D6D6D6;">Horario</th>
+		<th style="background-color: #D6D6D6;">Clase</th>
+	</tr>
+	<tr>
+		<td>7 - 8</td>
+		<td rowspan="2">Aplicaciones Web</td>
+	</tr>
+	<tr>
+		<td>8 - 9</td>
+	</tr>
+	<tr>
+		<td>9 - 10</td>
+		<td>Probabilidad y Estadística</td>
+	</tr>
+	<tr>
+		<td>10 - 11</td>
+		<td rowspan="2">Sistemas Operativos</td>
+	</tr>
+	<tr>
+		<td>11 - 12</td>
+	</tr>
+	<tr>
+		<td>12 - 1</td>
+		<td rowspan="2">Base de datos para aplicaciones</td>
+	</tr>
+	<tr>
+		<td>1 - 2</td>
+	</tr>
+	<tr>
+		<td>2 - 3</td>
+		<td>Cálculo Diferencial</td>
+	</tr>
+</table>';
+		break;
+}
+?>
+</html>
